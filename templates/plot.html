@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main id="content" class="plotpage container">
+        <section class="grid">
+            <div id="plot">
+                {{ plot_div|safe }}
+            </div>
+        </section>
+        <form class="grid" method="POST" enctype="multipart/form-data">
+            <select name="spectra1" id="S1">
+                {% for file in files %}
+                <option value="{{ file }}">{{ file }}</option>
+                {% endfor %}
+            </select>
+            <select name="spectra2" id="S2">
+                {% for file in files %}
+                <option value="{{ file }}">{{ file }}</option>
+                {% endfor %}
+            </select>
+            <select name="operation" id="operation">
+                <option value="addition">Addition</option>
+                <option value="substraction">Subtraction</option>
+            </select>
+            <button type="submit">Submit operation</button>
+        </form>
+        <section class="grid">
+            <a href="/" type="button" class="secondary">Go back</a>
+        </section>
+    </main>
+{% endblock %}

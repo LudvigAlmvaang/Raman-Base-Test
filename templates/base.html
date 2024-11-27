@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script src="{{ url_for('static', filename='plotly.min.js') }}"></script>
+    <!-- given more time I might have made some use of HTMX and bootstrap-grid -->
+    <!-- <script src="{{ url_for('static', filename='htmx.min.js') }}"></script> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-grid.min.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='pico.min.css') }}" />
+    <title>Raman Base</title>
+  </head>
+  <body>
+    <header>
+        <div class="container">
+          <h2>Raman Spectra</h2>
+        </div>
+    </header>
+        {% block content %}{% endblock %}
+  </body>
+</html>

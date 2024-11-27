@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main id="content" class="homepage container">
+        <section>
+            <div class="grid">
+                <article>
+                    <p>Please upload tab separated value files.</p>
+                </article>
+            </div>
+        </section>
+        <form action="{{ url_for('upload.upload') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="files" multiple required>
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+{% endblock %}
