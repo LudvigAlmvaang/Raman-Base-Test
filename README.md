@@ -1,3 +1,9 @@
 # Raman-Base
- pip install -r requirements.txt
- python main.py
+* To Install dependencies
+  ```sh
+  pip install -r requirements.txt
+  ```
+* To run the server
+  ```sh
+  python main.py
+  ```
